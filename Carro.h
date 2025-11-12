@@ -16,7 +16,6 @@ public:
     string marca;
     char tamanio;
     string color;
-    int anio;
 
     Carro(char tamanio, string marca, string color);
 

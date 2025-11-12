@@ -13,8 +13,7 @@ class Estacionamiento
 {
 private:
    vector<Carro*> Carros;
-    
-    
+
 public:
     string nombre;
 

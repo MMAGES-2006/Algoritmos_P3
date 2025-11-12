@@ -24,13 +24,14 @@ int main()
   do
   {
     int ingresarAuto;
-  cin >> ingresarAuto;
-  if (ingresarAuto == 0)
+    cin >> ingresarAuto;
+    if (ingresarAuto == 0)
     {
       cout << "Gracias! Vuelva pronto." << endl;
 
+      return 0;
     }
-  else if (ingresarAuto == 1)
+    else if (ingresarAuto == 1)
     {
       cout << "Ahora prosiga a ingresar los datos de su vehiculo: "<< endl;
       cout << "Tamanio, Grande o Pequeño: ";
