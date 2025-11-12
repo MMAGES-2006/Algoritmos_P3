@@ -2,10 +2,16 @@
 
 Bienvenido UpPArking
 QUiere meter un auto?
-1
-marc
-c
-t
+
+ cout << endl;
+    cout << "Ingrese: " << endl; 
+    cout << "==============================================================" << endl; 
+    cout << "| 1 para ver los usuarios de esta red                        |" << endl;
+    cout << "| 2 para ver las publicaciones que han sido registradas.     |" << endl;
+    cout << "| 3 para entrar al perfil de un usuario por medio de su ID.  |" << endl;
+    cout << "| 4 para agregar un nuevo usuario. (t,m,c)                          |" << endl;
+    cout << "| 5 para salir del programa.                                 |" << endl;
+    cout << "=============================================================="<< endl;  
 
 
 Funcione5: 
@@ -20,12 +26,4 @@ Condicional que cada vez que 5e quiera ingre5ar un carro grande lea cuanto5 carr
 
 Irme del Parking
 
-    cout << endl;
-    cout << "Ingrese: " << endl; 
-    cout << "==============================================================" << endl; 
-    cout << "| 1 para ver los usuarios de esta red                        |" << endl;
-    cout << "| 2 para ver las publicaciones que han sido registradas.     |" << endl;
-    cout << "| 3 para entrar al perfil de un usuario por medio de su ID.  |" << endl;
-    cout << "| 4 para agregar un nuevo usuario.                           |" << endl;
-    cout << "| 5 para salir del programa.                                 |" << endl;
-    cout << "=============================================================="<< endl;  
+   

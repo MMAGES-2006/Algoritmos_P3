@@ -11,42 +11,48 @@ using namespace std;
 int main()
 {
   Estacionamiento par("UpParking");
-
-  cout << "                          Bienvenido a UPparking" << endl;
-  cout <<"===========================================================================" << endl;
-  cout << "Bienvenidos a UParking!" << endl;
-  cout << "Para usar el estacionamiento, escribe 1. Si no deseas hacerlo, escribe 0: " << endl;
-
   char tam;
   string label, col;
   Carro nn(tam, label, col);
+
+
+
+  cout << "                          ¡Bienvenido a UPparking!" << endl;
+  cout << "¿Desea usar el estacionamiento?" << endl;
+  cout << "(Para Si, escriba 1. Para No, escriba 0)" << endl;
+  
+  int usar;
+  cin >> usar;
+  
+  if (usar == 0)
+    {
+      cout << "¡Gracias! Vuelva pronto ;)" << endl;
+    }
+        else if (usar == 1)
+        {
+        cout << endl;
+        cout << "==============================================================" << endl; 
+        cout << "| 1 Para ver el estado del estacionamiento                   |" << endl;
+        cout << "| 2 Para encontrar un vehiculo por medio de su ID.           |" << endl;
+        cout << "| 3 Para ingresar un nuevo vehiculo (tamanio,marca,color).   |" << endl;
+        cout << "| 4 Para salir caminando.                                    |" << endl;
+        cout << "=============================================================="<< endl;  
+
+        par.meterVehiculo(nn);
+      
+        }
   
   do
   {
-    int ingresarAuto;
-    cin >> ingresarAuto;
-    if (ingresarAuto == 0)
-    {
-      cout << "Gracias! Vuelva pronto." << endl;
-
-      return 0;
-    }
-    else if (ingresarAuto == 1)
-    {
-      cout << "Ahora prosiga a ingresar los datos de su vehiculo: "<< endl;
-      cout << "Tamanio, Grande o Pequeño: ";
-      cin >> nn.tamanio;
-      cout << endl << "Marca: ";
-      cin >> nn.marca;
-      cout << endl << "Color: ";
-      cin >> nn.color;
-
-      par.meterVehiculo(nn);
-      
-    }
+    
 
   }while(true);
   
+
+
+
+
+
       
 
 }
