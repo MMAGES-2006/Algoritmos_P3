@@ -4,39 +4,48 @@
 #include <string>
 
 #include "Carro.h"
+#include "Estacionamiento.h"
 
 using namespace std;
 
 int main()
 {
+  Estacionamiento par("UpParking");
+
+  cout << "                          Bienvenido a UPparking" << endl;
+  cout <<"===========================================================================" << endl;
+  cout << "Bienvenidos a UParking!" << endl;
+  cout << "Para usar el estacionamiento, escribe 1. Si no deseas hacerlo, escribe 0: " << endl;
+
+  char tam;
+  string label, col;
+  Carro nn(tam, label, col);
+  
+  do
+  {
     int ingresarAuto;
-    cout << "                          Bienvenido a UPparking" << endl;
-    cout <<"===========================================================================" << endl;
+  cin >> ingresarAuto;
+  if (ingresarAuto == 0)
+    {
+      cout << "Gracias! Vuelva pronto." << endl;
 
-    cout << "Bienvenidos a UParking!" << endl;
-    cout << "Para usar el estacionamiento, escribe 1. Si no deseas hacerlo, escribe 0: " << endl;
+    }
+  else if (ingresarAuto == 1)
+    {
+      cout << "Ahora prosiga a ingresar los datos de su vehiculo: "<< endl;
+      cout << "Tamanio, Grande o Pequeño: ";
+      cin >> nn.tamanio;
+      cout << endl << "Marca: ";
+      cin >> nn.marca;
+      cout << endl << "Color: ";
+      cin >> nn.color;
 
-    cin >> ingresarAuto;
-    if (ingresarAuto == 0)
-      {
-        cout << "Gracias! Vuelva pronto." << endl;
+      par.meterVehiculo(nn);
+      
+    }
 
-      }
-    else if (ingresarAuto == 1)
-      {
-        cout << "Cuentanos los detalles del automovil a ingresar."<< endl;
-        cout << "Su tamanio es grande o pequenio?" << endl;
-        //cin 
-        cout << "Cual es la marca de su auto?" << endl;
-        //cin
-        cout << "De que color es su automovil?" << endl;
-        //cin
-        cout << "Por ultimo, de que anio es el vehiculo?" << endl;
-
-        //if ( == 'g' ||  == 'G')
-        //{
-
-        //}
-      }
+  }while(true);
+  
+      
 
 }

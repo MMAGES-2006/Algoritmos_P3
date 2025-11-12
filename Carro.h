@@ -18,17 +18,9 @@ public:
     string color;
     int anio;
 
-    vector<Carro*> Carros;
-
-    Carro(char tamanio, string marca, string color, int anio);
+    Carro(char tamanio, string marca, string color);
 
     ~Carro();
-
-    void meterCarro();
-    void sacarCarro();
-    void seeAvailable();
-
-
 
 };
 #endif

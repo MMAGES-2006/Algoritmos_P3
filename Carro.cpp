@@ -4,23 +4,14 @@
 
 using namespace std;
 
-Carro::Carro(char tamanio, string marca, string color, int anio)
+Carro::Carro(char tamanio, string marca, string color)
 {
+    this-> tamanio = tamanio;
+    this-> marca = marca;
+    this-> color = color;
 
 }
 
 Carro::~Carro()
-{
-}
-
-inline void Carro::meterCarro()
-{
-}
-
-void Carro::sacarCarro()
-{
-}
-
-void Carro::seeAvailable()
 {
 }
