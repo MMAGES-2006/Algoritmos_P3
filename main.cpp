@@ -25,6 +25,8 @@ int main()
   }
   else if (usar == 1)
   {
+
+    
     int opcion;
     cout << endl;
     cout << "==============================================================" << endl; 
@@ -33,7 +35,6 @@ int main()
     cout << "| 3 Para ingresar un nuevo vehiculo (tamanio,marca,color).   |" << endl;
     cout << "| 4 Para salir caminando.                                    |" << endl;
     cout << "=============================================================="<< endl;  
-
 
     do
     {
@@ -49,11 +50,14 @@ int main()
       switch (opcion)
       {
       case 1:
+        cout << endl;
+        par.disponibilidad();
         
         
         break;
 
       case 2:
+        
 
         break;
 
@@ -68,6 +72,7 @@ int main()
 
         nn.setID();
         par.meterVehiculo(nn);
+
 
         
         break;

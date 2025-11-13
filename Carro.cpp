@@ -5,6 +5,9 @@
 
 using namespace std;
 
+void Carro::setID()
+{
+}
 
 void Carro::mostrar()
 {
