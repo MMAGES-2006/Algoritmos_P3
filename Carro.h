@@ -16,8 +16,12 @@ public:
     string marca;
     char tamanio;
     string color;
+    int id;
 
-    Carro(char tamanio, string marca, string color);
+    void setID();
+    void mostrar();
+
+    Carro(char tamanio, string marca, string color, int id);
 
     ~Carro();
 

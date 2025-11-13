@@ -13,11 +13,28 @@ void Estacionamiento::meterVehiculo(Carro car)
     this->Carros.push_back(nc);
 
 }
-void Estacionamiento::sacarVehiculo()
+void Estacionamiento::sacarVehiculo(int sel)
 {
 }
 void Estacionamiento::disponibilidad()
 {
+    for(int i = 0; i < Carros.size(); i++)
+    {
+        cout << "Estos son los carros que hay actualmente en el estacionamiento: " << endl;
+        Carros[i] -> mostrar();
+        cout << endl;
+
+        if(Carros.size() < max)
+        {
+            dispo = max - Carros.size();
+            cout << "Estos son los espacios disponibles para carros pequeños: " << dispo << endl;
+        }
+        else
+        {
+            cout << "Ya no hay espacios dispobles, lo sentimos :( " << endl;
+        }
+
+    }
 }
 
 Estacionamiento::Estacionamiento(string nombre)
