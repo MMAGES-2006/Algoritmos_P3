@@ -1,3 +1,4 @@
+//Librerias y archivos externos con las clases y funciones
 #include <iostream>
 #include <vector>
 #include <string>
@@ -8,6 +9,7 @@ using namespace std;
 
 int main()
 {
+  //Comandos para cambiar el color del texto en la consola
   const string Rojo  = "\033[31m";
   const string Verde = "\033[32m";
   const string Regresar = "\033[0m";
@@ -22,6 +24,7 @@ int main()
   int usar;
   cin >> usar;
   
+  //If para dar acceso al estacionamiento
   if (usar == 0)
   {
     cout << "¡Gracias! Vuelva pronto ;)" << endl;
@@ -30,6 +33,7 @@ int main()
   else if (usar == 1)
   {
   
+    //Menu de opciones, manejado por un switch
     menu:
     int opcion;
     cout << endl;
@@ -42,6 +46,7 @@ int main()
 
     do
     {
+      //Variables y constructores a usar en el codigo
       char tam;
       string label, col;
       int id;
@@ -54,6 +59,7 @@ int main()
 
       switch (opcion)
       {
+        //Ver el estado del estacionamiento
       case 1:
         cout << endl;
         par.disponibilidad();
@@ -61,6 +67,7 @@ int main()
         goto menu;
         break;  
 
+        //Funciones para agregar un vehiculo, verificando el estado del estacionamiento
       case 2:
         cout << "Podria proporcionarnos los siguientes datos de su vehiculo?" << endl;
         cout << "Tamanio: ";
@@ -93,10 +100,11 @@ int main()
         cout << "Vehiculo ingresado con exito :)" << endl;
         cout << "Que le gustaria hacer ahora?" << endl;
 
-        goto menu;
+        goto menu; //Linea para volver al menu despues de ingresar un vehiculo
         
         break;
 
+        //Funcion para retirar el vehiculo, por medio del ID
       case 3:
         cout << "Ingrese el ID del carro que quiere retirar y el tamaño del vehiculo" << endl;
         cout << "ID: " << endl;
@@ -119,6 +127,7 @@ int main()
         
         break;
 
+        //Caso para salirse del programa
       case 4:
 
         cout << Verde << "Gracias por venir :)" << Regresar << endl;
