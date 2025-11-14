@@ -19,12 +19,18 @@ public:
     string nombre;
     int maxP = 28;
     int maxG = 8;
-    int dispo;
+    int dispoP;
+    int dispoG;
 
+    void mostrarCarrosP();
+    void mostrarCarrosG();
+    void dispoCarrosP(char tamanio);
+    void dispoCarrosG(char tamanio);
     void getCarro(int id);
     void meterVehiculoP(Carro car);
     void meterVehiculoG(Carro car);
-    void sacarVehiculo(int sel);
+    void sacarVehiculoP(int sel);
+    void sacarVehiculoG(int sel);
     void disponibilidad();
 
     Estacionamiento(string nombre);

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <string>
 #include "Carro.h"
 #include "Estacionamiento.h"
 
@@ -26,6 +25,7 @@ int main()
   if (usar == 0)
   {
     cout << "¡Gracias! Vuelva pronto ;)" << endl;
+
   }
   else if (usar == 1)
   {
@@ -37,40 +37,44 @@ int main()
     cout << "| 1 Para ver el estado del estacionamiento                   |" << endl;
     cout << "| 2 Para ingresar un nuevo vehiculo (tamanio,marca,color).   |" << endl;
     cout << "| 3 Para retirar un vehiculo                                 |" << endl;
-    cout << "| 4 Para buscar un vehiculo en especifico por medio de su ID |" << endl;
     cout << "| " << Rojo << "4 Para salir caminando. " << Regresar << "                                   |" << endl;
     cout << "==============================================================" << endl;  
 
     do
     {
+      char tam;
+      string label, col;
+      int id;
+      int sel;
+      Carro nn(tam, label, col, id);
       int opcion;
       cin >> opcion;
       cout << endl;
 
-      char tam;
-      string label, col;
-      int id;
-      Carro nn(tam, label, col, id);
 
       switch (opcion)
       {
       case 1:
         cout << endl;
         par.disponibilidad();
-        
+
+        goto menu;
         break;  
 
       case 2:
         cout << "Podria proporcionarnos los siguientes datos de su vehiculo?" << endl;
         cout << "Tamanio: ";
         cin >> nn.tamanio;
-        if(nn.tamanio == 'G' || nn.tamanio == 'g' )
+        if(nn.tamanio == 'P' || nn.tamanio == 'p' )
         {
+          par.dispoCarrosP(tam);
+          
           cout << endl << "Marca: ";
           cin >> nn.marca;
           cout << endl << "Color: ";
           cin >> nn.color;
 
+          nn.setID();
           par.meterVehiculoP(nn);
 
         }
@@ -81,6 +85,7 @@ int main()
           cout << endl << "Color: ";
           cin >> nn.color;
 
+          nn.setID();
           par.meterVehiculoG(nn);
 
         }
@@ -90,19 +95,31 @@ int main()
 
         goto menu;
         
-
         break;
 
       case 3:
-        
+        cout << "Ingrese el ID del carro que quiere retirar y el tamaño del vehiculo" << endl;
+        cout << "ID: " << endl;
+        cin >> id;
+        cout << "Tamanio: " << endl;
+        cin >> tam;
+        sel = id;
+        if(nn.tamanio == 'P' || nn.tamanio == 'p' )
+        {
+          par.sacarVehiculoP(sel);
+
+        }
+        else if(nn.tamanio == 'G' || nn.tamanio == 'g' )
+        {
+          par.sacarVehiculoG(sel);
+
+        }
+
+        goto menu;
         
         break;
 
       case 4:
-        
-        break;
-
-      case 5:
 
         cout << Verde << "Gracias por venir :)" << Regresar << endl;
         return 0;
@@ -114,15 +131,6 @@ int main()
     }while(true);
 
     return 0;
-  }
-  
-  
-  
-
-
-
-
-
-      
+  }     
 
 }

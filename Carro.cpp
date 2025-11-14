@@ -7,7 +7,7 @@ using namespace std;
 
 void Carro::setID()
 {
-    this-> id = rand()%100;
+    this->id = rand()%100;
     
 }
 
@@ -20,9 +20,9 @@ void Carro::mostrar()
 
 }
 
-Carro::Carro(char tamanio, string marca, string color, int id)
+Carro::Carro(char tam, string marca, string color, int id)
 {
-    this-> tamanio = tamanio;
+    this-> tamanio = tam;
     this-> marca = marca;
     this-> color = color;
     this-> id = id;
