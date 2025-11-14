@@ -12,12 +12,19 @@ void Estacionamiento::getCarro(int id)
 {
 }
 
-void Estacionamiento::meterVehiculo(Carro car)
+void Estacionamiento::meterVehiculoP(Carro car)
 {
     Carro *nc = new Carro(car);
 
-    this->Carros.push_back(nc);
+    this->CarrosP.push_back(nc);
 
+}
+
+void Estacionamiento::meterVehiculoG(Carro car)
+{
+    Carro *nc = new Carro(car);
+
+    this->CarrosP.push_back(nc);
 }
 
 void Estacionamiento::sacarVehiculo(int sel)
@@ -26,19 +33,20 @@ void Estacionamiento::sacarVehiculo(int sel)
 
 void Estacionamiento::disponibilidad()
 {
-    for(int i = 0; i < Carros.size(); i++)
+    for(int i = 0; i < CarrosP.size(); i++)
     {
         cout << "Estos son los carros que hay actualmente en el estacionamiento: " << endl;
-        Carros[i] -> mostrar();
+        CarrosP[i] -> mostrar();
         cout << endl;
 
-        if(Carros.size() < maxP)
+        if(CarrosP.size() < maxP)
         {
             
-            dispo = maxP - Carros.size();
+            dispo = maxP - CarrosP.size();
             cout << "Estos son los espacios disponibles para carros pequenios:" << dispo << endl;
-            for(int j = 0; j < Carros.size(); j++)
+            for(int j = 0; j < CarrosP.size(); j++)
             {
+                
 
 
             }
@@ -58,8 +66,9 @@ Estacionamiento::Estacionamiento(string nombre)
     this-> nombre = nombre;
 }
 
-Estacionamiento::Estacionamiento(string nombre, vector<Carro *> Carros)
+Estacionamiento::Estacionamiento(string nombre, vector<Carro *> CarrosP, vector<Carro *> CarrosG)
 {
     this-> nombre = nombre;
-    this-> Carros = Carros;
+    this-> CarrosP = CarrosP;
+    this-> CarrosG = CarrosG;
 }

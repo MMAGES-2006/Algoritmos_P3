@@ -12,7 +12,8 @@ using namespace std;
 class Estacionamiento
 {
 private:
-   vector<Carro*> Carros;
+   vector<Carro*> CarrosP;
+   vector<Carro*> CarrosG;
 
 public:
     string nombre;
@@ -21,12 +22,13 @@ public:
     int dispo;
 
     void getCarro(int id);
-    void meterVehiculo(Carro car);
+    void meterVehiculoP(Carro car);
+    void meterVehiculoG(Carro car);
     void sacarVehiculo(int sel);
     void disponibilidad();
 
     Estacionamiento(string nombre);
-    Estacionamiento(string nombre, vector<Carro*> Carros);
+    Estacionamiento(string nombre, vector<Carro*> CarrosP, vector<Carro*> CarrosG);
 
     
 };

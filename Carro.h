@@ -10,8 +10,8 @@ using namespace std;
 class Carro
 {
 private:
-    
-    
+
+
 public:
     string marca;
     char tamanio;

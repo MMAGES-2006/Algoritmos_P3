@@ -29,7 +29,7 @@ int main()
   }
   else if (usar == 1)
   {
-
+  
     menu:
     int opcion;
     cout << endl;
@@ -39,7 +39,7 @@ int main()
     cout << "| 3 Para retirar un vehiculo                                 |" << endl;
     cout << "| 4 Para buscar un vehiculo en especifico por medio de su ID |" << endl;
     cout << "| " << Rojo << "4 Para salir caminando. " << Regresar << "                                   |" << endl;
-    cout << "=============================================================="<< endl;  
+    cout << "==============================================================" << endl;  
 
     do
     {
@@ -58,19 +58,32 @@ int main()
         cout << endl;
         par.disponibilidad();
         
-        
-        break;
+        break;  
 
       case 2:
         cout << "Podria proporcionarnos los siguientes datos de su vehiculo?" << endl;
         cout << "Tamanio: ";
         cin >> nn.tamanio;
-        cout << endl << "Marca: ";
-        cin >> nn.marca;
-        cout << endl << "Color: ";
-        cin >> nn.color;
+        if(nn.tamanio == 'G' || nn.tamanio == 'g' )
+        {
+          cout << endl << "Marca: ";
+          cin >> nn.marca;
+          cout << endl << "Color: ";
+          cin >> nn.color;
 
-        par.meterVehiculo(nn);
+          par.meterVehiculoP(nn);
+
+        }
+        else if(nn.tamanio == 'G' || nn.tamanio == 'g' )
+        {
+          cout << endl << "Marca: ";
+          cin >> nn.marca;
+          cout << endl << "Color: ";
+          cin >> nn.color;
+
+          par.meterVehiculoG(nn);
+
+        }
 
         cout << "Vehiculo ingresado con exito :)" << endl;
         cout << "Que le gustaria hacer ahora?" << endl;
@@ -81,6 +94,7 @@ int main()
         break;
 
       case 3:
+        
         
         break;
 
