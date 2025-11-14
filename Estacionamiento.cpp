@@ -6,6 +6,12 @@
 #include "Estacionamiento.h"
 
 using namespace std;
+
+
+void Estacionamiento::getCarro(int id)
+{
+}
+
 void Estacionamiento::meterVehiculo(Carro car)
 {
     Carro *nc = new Carro(car);
@@ -13,9 +19,11 @@ void Estacionamiento::meterVehiculo(Carro car)
     this->Carros.push_back(nc);
 
 }
+
 void Estacionamiento::sacarVehiculo(int sel)
 {
 }
+
 void Estacionamiento::disponibilidad()
 {
     for(int i = 0; i < Carros.size(); i++)
@@ -24,10 +32,16 @@ void Estacionamiento::disponibilidad()
         Carros[i] -> mostrar();
         cout << endl;
 
-        if(Carros.size() < max)
+        if(Carros.size() < maxP)
         {
-            dispo = max - Carros.size();
-            cout << "Estos son los espacios disponibles para carros pequeños: " << dispo << endl;
+            
+            dispo = maxP - Carros.size();
+            cout << "Estos son los espacios disponibles para carros pequenios:" << dispo << endl;
+            for(int j = 0; j < Carros.size(); j++)
+            {
+
+
+            }
         }
         else
         {
@@ -36,6 +50,8 @@ void Estacionamiento::disponibilidad()
 
     }
 }
+
+
 
 Estacionamiento::Estacionamiento(string nombre)
 {

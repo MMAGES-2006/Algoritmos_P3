@@ -7,6 +7,8 @@ using namespace std;
 
 void Carro::setID()
 {
+    this-> id = rand()%100;
+    
 }
 
 void Carro::mostrar()

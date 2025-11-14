@@ -16,9 +16,11 @@ private:
 
 public:
     string nombre;
-    int max = 28;
+    int maxP = 28;
+    int maxG = 8;
     int dispo;
 
+    void getCarro(int id);
     void meterVehiculo(Carro car);
     void sacarVehiculo(int sel);
     void disponibilidad();
